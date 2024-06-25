@@ -3,10 +3,10 @@
 @use "../abstracts/mixins";
 
 .promo {
-  height: map-get($map: variables.$promo-height, $key: "lg");
+  height: map-get($map: variables.$promo-height, $key: "xl");
   background: center/cover no-repeat url("/jpg/background.jpg");
 
-  @include mixins.sm-media-query {
+  @include mixins.xs-media-query {
     height: map-get($map: variables.$promo-height, $key: "sm");
     background-image: url("/jpg/background-sm.jpg");
   }
@@ -15,7 +15,7 @@
 .promo__socials {
   @extend %row-items-center-gap-15;
 
-  width: map-get($map: variables.$promo-height, $key: "lg");
+  width: map-get($map: variables.$promo-height, $key: "xl");
   rotate: -90deg;
   transform: translate(-100%, 50px);
   transform-origin: top left;
@@ -45,8 +45,8 @@
   margin-top: map-get($map: variables.$spacing, $key: "spacing-178");
 }
 
-.promo__profession {
-  max-width: map-get($map: variables.$promo-profession-max-width, $key: "lg");
+.promo__subtitle {
+  max-width: map-get($map: variables.$promo-profession-max-width, $key: "xl");
   font-size: map-get($map: variables.$font-sizes, $key: "text-5xl");
   line-height: map-get($map: variables.$leading, $key: "tight");
 

@@ -1,0 +1,12 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.experience-cards {
+  $gap: map-get($map: variables.$spacing, $key: "spacing-45");
+
+  @include mixins.column-with-gap($gap);
+
+  @include mixins.sm-media-query {
+    gap: map-get($map: variables.$spacing, $key: "spacing-10");
+  }
+}

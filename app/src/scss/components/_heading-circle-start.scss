@@ -2,17 +2,14 @@
 @use "../abstracts/placeholders";
 
 .heading-circle-start {
-  position: relative;
-  z-index: 2;
+  @extend %orange-circle-36-before;
+
   padding-left: map-get($map: variables.$spacing, $key: "spacing-10");
 
   &::before {
-    @extend %orange-circle-36;
-    content: "";
-    position: absolute;
     top: 50%;
     left: 0;
-    z-index: -1;
+
     transform: translateY(-50%);
   }
 }

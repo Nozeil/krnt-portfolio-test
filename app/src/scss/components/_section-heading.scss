@@ -1,0 +1,24 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.section-heading {
+  @include mixins.column-center;
+}
+
+.section-heading__subtitle {
+  margin-bottom: map-get($map: variables.$spacing, $key: "spacing-25");
+  font-size: map-get($map: variables.$font-sizes, $key: "text-4xl");
+  line-height: map-get($map: variables.$leading, $key: "relaxed");
+  text-align: center;
+
+  @include mixins.sm-media-query {
+    margin-top: map-get($map: variables.$spacing, $key: "spacing-20");
+    margin-bottom: map-get($map: variables.$spacing, $key: "spacing-15");
+    font-size: map-get($map: variables.$font-sizes, $key: "text-2xl");
+  }
+}
+
+.section-heading__dash {
+  @extend %orange-dash;
+}

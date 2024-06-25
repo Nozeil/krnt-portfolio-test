@@ -1,0 +1,46 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.benefits-section {
+  @extend %section;
+}
+
+.benefits {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-60",
+  );
+  $padding-x: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-72",
+  );
+
+  @include mixins.column-with-gap($gap);
+
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+
+  @include mixins.xl-media-query {
+    padding: 0;
+  }
+
+  @include mixins.sm-media-query {
+    gap: map-get($map: variables.$spacing, $key: "spacing-40");
+  }
+}
+
+.benefits__content {
+  display: flex;
+  gap: map-get($map: variables.$spacing, $key: "spacing-144");
+
+  @include mixins.xl-media-query {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @include mixins.lg-media-query {
+    gap: map-get($map: variables.$spacing, $key: "spacing-40");
+  }
+}

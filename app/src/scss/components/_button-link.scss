@@ -5,9 +5,7 @@
 .button_link {
   @extend %poppins-bold;
 
-  @include mixins.column;
+  @include mixins.column-center;
 
-  justify-content: center;
-  align-items: center;
   font-size: map-get($map: variables.$font-sizes, $key: "text-base");
 }

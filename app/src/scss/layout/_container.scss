@@ -2,7 +2,7 @@
 @use "../abstracts/mixins";
 
 .container {
-  max-width: map-get($map: variables.$container-width, $key: "lg");
+  max-width: map-get($map: variables.$container-width, $key: "xl");
   margin: 0 auto;
 
   @include mixins.xl-media-query {

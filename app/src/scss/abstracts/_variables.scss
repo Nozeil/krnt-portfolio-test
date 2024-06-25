@@ -4,7 +4,9 @@ $orange: #ffa501;
 
 $breakpoints: (
   "xl": 1440px,
-  "sm": 480px,
+  "lg": 1024px,
+  "sm": 640px,
+  "xs": 480px,
 );
 
 $z-index: (
@@ -21,21 +23,31 @@ $spacing: (
   "spacing-32": 32px,
   "spacing-40": 40px,
   "spacing-44": 44px,
+  "spacing-45": 45px,
   "spacing-50": 50px,
+  "spacing-60": 60px,
+  "spacing-72": 72px,
   "spacing-90": 90px,
+  "spacing-120": 120px,
+  "spacing-144": 144px,
   "spacing-178": 178px,
 );
 
 $font-sizes: (
+  "text-xs": 1.2rem,
+  "text-sm": 1.4rem,
   "text-base": 1.6rem,
   "text-lg": 1.8rem,
+  "text-xl": 2rem,
   "text-2xl": 2.4rem,
   "text-3xl": 2.6rem,
+  "text-4xl": 3.8rem,
   "text-5xl": 4.8rem,
 );
 
 $leading: (
   "tight": 1.25,
+  "relaxed": 1.67,
 );
 
 $border-line-width: (
@@ -45,21 +57,33 @@ $border-line-width: (
 $shadow-base: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
 $container-width: (
-  "lg": 1140px,
+  "xl": 1140px,
   "xs": 320px,
 );
 
 $nav-width: (
-  "lg": 345px,
+  "xl": 345px,
   "sm": 250px,
 );
 
 $promo-height: (
-  "lg": 800px,
+  "xl": 800px,
   "sm": 640px,
 );
 
 $promo-profession-max-width: (
-  "lg": 520px,
+  "xl": 520px,
   "sm": 280px,
+);
+
+$circle-sizes: (
+  "circle-15": 15px,
+  "circle-36": 36px,
+);
+
+$time-line-spacing: 42px;
+
+$experiance-card-max-width: (
+  "xl": 375px,
+  "sm": 250px,
 );

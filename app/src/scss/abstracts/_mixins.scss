@@ -24,8 +24,20 @@
 }
 
 @mixin column-with-gap($gap) {
-  display: flex;
-  flex-direction: column;
+  @include column;
+
+  gap: $gap;
+}
+
+@mixin column-center {
+  @include column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column-center-with-gap($gap) {
+  @include column-center;
+
   gap: $gap;
 }
 
@@ -71,10 +83,32 @@
   }
 }
 
+@mixin lg-media-query {
+  $mw: map-get(
+    $map: variables.$breakpoints,
+    $key: "lg",
+  );
+
+  @media (max-width: $mw) {
+    @content;
+  }
+}
+
 @mixin sm-media-query {
   $mw: map-get(
     $map: variables.$breakpoints,
     $key: "sm",
+  );
+
+  @media (max-width: $mw) {
+    @content;
+  }
+}
+
+@mixin xs-media-query {
+  $mw: map-get(
+    $map: variables.$breakpoints,
+    $key: "xs",
   );
 
   @media (max-width: $mw) {

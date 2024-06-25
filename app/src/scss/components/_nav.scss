@@ -5,7 +5,7 @@
 .nav {
   $width: map-get(
     $map: variables.$nav-width,
-    $key: "lg",
+    $key: "xl",
   );
 
   @extend %transition-300;

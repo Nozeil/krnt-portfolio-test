@@ -2,15 +2,21 @@
 
 @use "./base/base";
 
+@use "./components/benefits";
 @use "./components/burger-close-button";
 @use "./components/burger";
 @use "./components/button-filled";
 @use "./components/button-link";
+@use "./components/experience-card";
+@use "./components/experience-cards";
+@use "./components/heading-circle-center";
 @use "./components/heading-circle-start";
 @use "./components/nav";
 @use "./components/overlay";
 @use "./components/promo";
+@use "./components/section-heading";
 @use "./components/social";
+@use "./components/time-line";
 
 @use "./layout/main";
 @use "./layout/container";

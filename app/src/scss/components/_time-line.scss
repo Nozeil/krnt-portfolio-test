@@ -1,0 +1,43 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.time-line {
+  $gap: map-get($map: variables.$spacing, $key: "spacing-45");
+
+  @include mixins.column-with-gap($gap);
+
+  position: relative;
+  padding-left: variables.$time-line-spacing;
+
+  &::before {
+    $circle-size: map-get(
+      $map: variables.$circle-sizes,
+      $key: "circle-15",
+    );
+    $width: calc(100% - $circle-size);
+    
+    @include mixins.dash(1px,  $width, variables.$black);
+
+    content: "";
+    position: absolute;
+    top: $circle-size;
+    left: 0;
+    
+  }
+}
+
+.time-line__title {
+  position: relative;
+  font-size: map-get($map: variables.$font-sizes, $key: "text-xl");
+
+  &::before {
+    @extend %orange-circle-15;
+    
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0 - variables.$time-line-spacing;
+    transform: translate(-50%, -50%);
+  }
+}
