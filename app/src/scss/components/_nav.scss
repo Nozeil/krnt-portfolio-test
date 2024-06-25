@@ -1,0 +1,73 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.nav {
+  $width: map-get(
+    $map: variables.$nav-width,
+    $key: "lg",
+  );
+
+  @extend %transition-300;
+
+  @include mixins.column;
+  @include mixins.size($width, 100%);
+  @include mixins.fixed("z-10");
+  @include mixins.burger-left($width);
+
+  justify-content: space-between;
+  padding: map-get($map: variables.$spacing, $key: "spacing-50")
+    map-get($map: variables.$spacing, $key: "spacing-40");
+  font-size: map-get($map: variables.$font-sizes, $key: "text-2xl");
+  color: variables.$white;
+  background-color: variables.$orange;
+
+  @include mixins.sm-media-query {
+    $width: map-get(
+      $map: variables.$nav-width,
+      $key: "sm",
+    );
+
+    $padding-x: map-get(
+      $map: variables.$spacing,
+      $key: "spacing-20",
+    );
+
+    @include mixins.size($width, 100%);
+    @include mixins.burger-left($width);
+
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+  }
+}
+
+.nav__list {
+  @extend %column-gap-15;
+
+  margin-top: map-get($map: variables.$spacing, $key: "spacing-90");
+  margin-left: map-get($map: variables.$spacing, $key: "spacing-40");
+}
+
+.nav__item {
+  @extend %poppins-bold;
+
+  position: relative;
+
+  &::before {
+    $left: -40px;
+    $border-width: map-get(
+      $map: variables.$border-line-width,
+      $key: "border-1",
+    );
+
+    @include mixins.solid-border($border-width, variables.$black);
+    @include mixins.size(15px, 15px);
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: $left;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}

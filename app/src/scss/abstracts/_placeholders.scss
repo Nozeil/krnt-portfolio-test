@@ -1,0 +1,57 @@
+@use "./variables";
+@use "./mixins";
+
+%poppins-medium {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+%poppins-bold {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+%row-item-center {
+  @include mixins.row(center, center);
+}
+
+%row-items-center-gap-15 {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-15",
+  );
+
+  @include mixins.row-with-gap(center, center, $gap);
+}
+
+%column-gap-15 {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-15",
+  );
+
+  @include mixins.column-with-gap($gap);
+}
+
+%transition-300 {
+  $duration: 300ms;
+
+  transition: ease-in-out $duration;
+}
+
+%orange-circle-36 {
+  $size: 36px;
+  $color: variables.$orange;
+
+  @include mixins.filled-circle($size, $color);
+}
+
+%filled-button {
+  @extend %poppins-bold;
+
+  padding: map-get($map: variables.$spacing, $key: "spacing-12")
+    map-get($map: variables.$spacing, $key: "spacing-25");
+  font-size: map-get($map: variables.$font-sizes, $key: "text-base");
+  background-color: variables.$orange;
+  box-shadow: variables.$shadow-base;
+}

@@ -1,0 +1,5 @@
+@use '../abstracts/variables';
+
+.main {
+  background-color: variables.$white;
+}

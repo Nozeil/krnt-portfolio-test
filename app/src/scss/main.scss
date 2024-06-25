@@ -1,1 +1,16 @@
 @use "./vendors/normalize";
+
+@use "./base/base";
+
+@use "./components/burger-close-button";
+@use "./components/burger";
+@use "./components/button-filled";
+@use "./components/button-link";
+@use "./components/heading-circle-start";
+@use "./components/nav";
+@use "./components/overlay";
+@use "./components/promo";
+@use "./components/social";
+
+@use "./layout/main";
+@use "./layout/container";

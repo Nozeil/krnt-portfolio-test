@@ -1,13 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/svg/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/scss/main.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="app">App</div>
+    <div class="app">
+      <div class="overlay"></div>
+      <nav class="nav">
+        <button class="burger-close-button">
+          <img src="/svg/close.svg" alt="burger-close-button" />
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">ПРО МЕНЯ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">МОЙ ОПЫТ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">МОИ НАВЫКИ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">МОИ РАБОТЫ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">ПРАЙС-ЛИСТ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">КОНТАКТЫ</a>
+          </li>
+        </ul>
+        <div class="social">
+          <a class="social__link" href="#">
+            <img src="/svg/github.svg" width="20" alt="github" />
+          </a>
+          <a class="social__link" href="#">
+            <img src="/svg/instagram.svg" width="20" alt="instagram" />
+          </a>
+          <a class="social__link" href="#">
+            <img src="/svg/facebook.svg" width="20" alt="facebook" />
+          </a>
+        </div>
+      </nav>
+      <main class="main">
+        <section class="promo">
+          <div class="promo__socials">
+            <h4>Социальные сети</h4>
+            <span class="promo__dash"></span>
+            <div class="social">
+              <a class="social__link" href="#">
+                <img src="/svg/github.svg" width="20" alt="github" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="/svg/instagram.svg" width="20" alt="instagram" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="/svg/facebook.svg" width="20" alt="facebook" />
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="promo__content">
+              <div class="promo__description">
+                <h4 class="heading-circle-start">Меня зовут Александра Смит</h4>
+                <h1 class="promo__profession">
+                  Я web-разработчик из города Москва
+                </h1>
+              </div>
+              <div class="promo__buttons">
+                <a class="button_filled button_link" href="#">Портфолио</a>
+                <a class="button_link" href="#">Про меня</a>
+              </div>
+            </div>
+          </div>
+          <button class="burger">
+            <img src="/svg/burger.svg" alt="burger-icon" />
+          </button>
+        </section>
+        <section></section>
+        <section></section>
+      </main>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

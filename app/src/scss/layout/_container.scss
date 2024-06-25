@@ -1,0 +1,11 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.container {
+  max-width: map-get($map: variables.$container-width, $key: "lg");
+  margin: 0 auto;
+
+  @include mixins.xl-media-query {
+    padding: 0 10px;
+  }
+}

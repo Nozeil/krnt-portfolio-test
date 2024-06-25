@@ -1,0 +1,65 @@
+$white: #ffffff;
+$black: #000000;
+$orange: #ffa501;
+
+$breakpoints: (
+  "xl": 1440px,
+  "sm": 480px,
+);
+
+$z-index: (
+  "z-5": 5,
+  "z-10": 10,
+);
+
+$spacing: (
+  "spacing-10": 10px,
+  "spacing-12": 12px,
+  "spacing-15": 15px,
+  "spacing-20": 20px,
+  "spacing-25": 25px,
+  "spacing-32": 32px,
+  "spacing-40": 40px,
+  "spacing-44": 44px,
+  "spacing-50": 50px,
+  "spacing-90": 90px,
+  "spacing-178": 178px,
+);
+
+$font-sizes: (
+  "text-base": 1.6rem,
+  "text-lg": 1.8rem,
+  "text-2xl": 2.4rem,
+  "text-3xl": 2.6rem,
+  "text-5xl": 4.8rem,
+);
+
+$leading: (
+  "tight": 1.25,
+);
+
+$border-line-width: (
+  "border-1": 1px,
+);
+
+$shadow-base: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+$container-width: (
+  "lg": 1140px,
+  "xs": 320px,
+);
+
+$nav-width: (
+  "lg": 345px,
+  "sm": 250px,
+);
+
+$promo-height: (
+  "lg": 800px,
+  "sm": 640px,
+);
+
+$promo-profession-max-width: (
+  "lg": 520px,
+  "sm": 280px,
+);

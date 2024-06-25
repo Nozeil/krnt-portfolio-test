@@ -1,0 +1,83 @@
+@use "./variables";
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin dash($width, $height, $bg-color) {
+  @include size($width, $height);
+
+  display: inline-block;
+  background-color: $bg-color;
+}
+
+@mixin row($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin column-with-gap($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin row-with-gap($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin solid-border($width, $color) {
+  border: $width solid $color;
+}
+
+@mixin fixed($z) {
+  position: fixed;
+  z-index: map-get($map: variables.$z-index, $key: $z);
+}
+
+@mixin filled-circle($size, $color) {
+  @include size($size, $size);
+
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin burger-left($width) {
+  left: -$width;
+  
+  &_opened {
+    transform: translateX($width);
+  }
+}
+
+@mixin xl-media-query {
+  $mw: map-get(
+    $map: variables.$breakpoints,
+    $key: "xl",
+  );
+
+  @media (max-width: $mw) {
+    @content;
+  }
+}
+
+@mixin sm-media-query {
+  $mw: map-get(
+    $map: variables.$breakpoints,
+    $key: "sm",
+  );
+
+  @media (max-width: $mw) {
+    @content;
+  }
+}
