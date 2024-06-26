@@ -1,6 +1,7 @@
 $white: #ffffff;
 $black: #000000;
 $orange: #ffa501;
+$red: #dc143c;
 
 $breakpoints: (
   "xl": 1440px,
@@ -15,17 +16,21 @@ $z-index: (
 );
 
 $spacing: (
+  "spacing-4": 4px,
+  "spacing-8": 8px,
   "spacing-10": 10px,
   "spacing-12": 12px,
   "spacing-15": 15px,
   "spacing-20": 20px,
   "spacing-25": 25px,
+  "spacing-30": 30px,
   "spacing-32": 32px,
   "spacing-40": 40px,
   "spacing-44": 44px,
   "spacing-45": 45px,
   "spacing-50": 50px,
   "spacing-60": 60px,
+  "spacing-70": 70px,
   "spacing-72": 72px,
   "spacing-90": 90px,
   "spacing-120": 120px,
@@ -87,3 +92,8 @@ $experiance-card-max-width: (
   "xl": 375px,
   "sm": 250px,
 );
+
+$textarea-height: (
+  "xl": 190px,
+  "sm": 143px,
+)

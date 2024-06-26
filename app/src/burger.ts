@@ -12,9 +12,9 @@ const getElements = () => {
 export const createBurgerMenu = () => {
   const [openMenuBtn, closeMenuBtn, nav, overlay] = getElements();
 
-  const areElementsExist = openMenuBtn && closeMenuBtn && nav && overlay;
+  const areElements = openMenuBtn && closeMenuBtn && nav && overlay;
 
-  if (areElementsExist) {
+  if (areElements) {
     const navOpenedClass = "nav_opened";
     const overlayVisibleClass = "overlay_visible";
 

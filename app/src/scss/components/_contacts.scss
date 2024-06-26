@@ -1,0 +1,143 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.contacts-section {
+  @extend %section;
+}
+
+.contacts {
+  display: flex;
+  gap: map-get($map: variables.$spacing, $key: "spacing-70");
+  padding-right: 35px;
+  padding-left: 52px;
+
+  @include mixins.xs-media-query {
+    padding: 0;
+  }
+}
+
+.contacts__content {
+  flex-grow: 1;
+  max-width: 585px;
+}
+
+.contacts__heading {
+  @include mixins.column;
+}
+
+.contacts__title {
+  margin: map-get($map: variables.$spacing, $key: "spacing-4") 0;
+}
+
+.contacts__subtitle {
+  @extend %section-heading;
+
+  @include mixins.sm-media-query {
+    margin-top: map-get($map: variables.$spacing, $key: "spacing-20");
+    margin-bottom: map-get($map: variables.$spacing, $key: "spacing-10");
+  }
+}
+
+.contacts__socials-wrapper,
+.contacts__socials {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-20",
+  );
+
+  @include mixins.column-with-gap($gap);
+}
+
+.contacts__socials-text,
+.contacts__form-heading {
+  @extend %poppins-bold;
+
+  margin: 0;
+  font-size: map-get($map: variables.$font-sizes, $key: "text-sm");
+}
+
+.contacts__social-links {
+  display: flex;
+  gap: map-get($map: variables.$spacing, $key: "spacing-20");
+}
+
+.contacts__form-heading {
+  margin-top: map-get($map: variables.$spacing, $key: "spacing-20");
+  margin-bottom: map-get($map: variables.$spacing, $key: "spacing-30");
+}
+
+.contacts__form {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-30",
+  );
+
+  @include mixins.column-with-gap($gap);
+
+  @include mixins.sm-media-query {
+    align-items: center;
+  }
+}
+
+.contacts__input-group {
+  display: flex;
+  gap: map-get($map: variables.$spacing, $key: "spacing-25");
+
+  @include mixins.sm-media-query {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.contacts__input-field {
+  @include mixins.column;
+
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.contacts__label {
+  $padding-x: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-8",
+  );
+
+  @include mixins.label;
+
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: fit-content;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  font-size: map-get($map: variables.$font-sizes, $key: "text-xs");
+  background-color: variables.$white;
+  transform: translateY(-50%);
+}
+
+.contacts__img {
+  max-height: 600px;
+
+  @include mixins.lg-media-query {
+    display: none;
+  }
+}
+
+.contacts__input-error {
+  $padding-x: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-10",
+  );
+
+  display: none;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  font-size: map-get($map: variables.$font-sizes, $key: "text-xs");
+  color: variables.$red;
+
+  &_visible {
+    display: inline;
+  }
+}

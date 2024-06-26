@@ -66,9 +66,39 @@
 
 @mixin burger-left($width) {
   left: -$width;
-  
+
   &_opened {
     transform: translateX($width);
+  }
+}
+
+@mixin input {
+  $padding-x: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-20",
+  );
+  $border-width: map-get(
+    $map: variables.$border-line-width,
+    $key: "border-1",
+  );
+
+  @include solid-border($border-width, variables.$black);
+
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  font-size: map-get($map: variables.$font-sizes, $key: "text-xs");
+  outline: none;
+
+  &_error {
+    color: variables.$red;
+    border-color: variables.$red;
+  }
+}
+
+@mixin label {
+  &_error {
+    color: variables.$red;
   }
 }
 

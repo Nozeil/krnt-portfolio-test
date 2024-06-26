@@ -37,7 +37,7 @@
             <a href="#">ПРАЙС-ЛИСТ</a>
           </li>
           <li class="nav__item">
-            <a href="#">КОНТАКТЫ</a>
+            <a href="#contacts">КОНТАКТЫ</a>
           </li>
         </ul>
         <div class="social">
@@ -92,7 +92,7 @@
             <div class="benefits">
               <div class="section-heading">
                 <h4 class="heading-circle-center">Опыт</h4>
-                <h2 class="section-heading__subtitle">Чем я буду полезна</h2>
+                <h5 class="section-heading__subtitle">Чем я буду полезна</h5>
                 <span class="section-heading__dash"></span>
               </div>
               <div class="benefits__content">
@@ -211,7 +211,115 @@
             </div>
           </div>
         </section>
-        <section></section>
+        <section id="contacts" class="contacts-section">
+          <div class="container">
+            <div class="contacts">
+              <img class="contacts__img" src="/jpg/photo.jpg" alt="photo" />
+
+              <div class="contacts__content">
+                <div class="contacts__socials-wrapper">
+                  <div class="contacts__heading">
+                    <h4 class="contacts__title heading-circle-start">
+                      Контакты
+                    </h4>
+                    <h5 class="contacts__subtitle">Свяжитесь со мной</h5>
+                    <span class="section-heading__dash"></span>
+                  </div>
+
+                  <div class="contacts__socials">
+                    <p class="contacts__socials-text">
+                      Любым удобным для вас способом:
+                    </p>
+
+                    <div class="contacts__social-links">
+                      <a class="social__link" href="#">
+                        <img
+                          src="/svg/facebook.svg"
+                          width="30"
+                          alt="facebook"
+                        />
+                      </a>
+                      <a class="social__link" href="#">
+                        <img
+                          src="/svg/telegram.svg"
+                          width="30"
+                          alt="telegram"
+                        />
+                      </a>
+                      <a class="social__link" href="#">
+                        <img
+                          src="/svg/instagram.svg"
+                          width="30"
+                          alt="instagram"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="contacts__form-heading">
+                  Или оставьте ваши данные и я сама вам напишу:
+                </h5>
+
+                <form class="contacts__form">
+                  <div class="contacts__input-group">
+                    <div class="contacts__input-field">
+                      <label
+                        class="contacts__label name-label"
+                        for="contact-name"
+                        >Ваше имя</label
+                      >
+                      <input
+                        id="contact-name"
+                        class="text-input contact-name-input"
+                        name="contact-name"
+                        type="text"
+                        autocomplete="off"
+                      />
+                      <span class="contacts__input-error name-error"
+                        >Пожалуйста, введите корректное имя.</span
+                      >
+                    </div>
+                    <div class="contacts__input-field">
+                      <label class="contacts__label email-label" for="email"
+                        >Ваша почта</label
+                      >
+                      <input
+                        id="email"
+                        class="text-input email-input"
+                        type="email"
+                        name="email"
+                        autocomplete="off"
+                      />
+                      <span class="contacts__input-error email-error"
+                        >Пожалуйста, введите корректный email.</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="contacts__input-field">
+                    <label class="contacts__label message-label" for="message"
+                      >Ваше сообщение</label
+                    >
+                    <textarea
+                      id="message"
+                      class="textarea"
+                      name="message"
+                    ></textarea>
+                    <span class="contacts__input-error message-error"
+                      >Пожалуйста, введите ваше сообщение.</span
+                    >
+                  </div>
+                  <button
+                    class="contacts__submit-button button_filled"
+                    type="submit"
+                  >
+                    Отправить сообщение
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <script type="module" src="/src/main.ts"></script>

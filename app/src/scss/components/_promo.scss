@@ -36,6 +36,10 @@
   @include mixins.column;
 
   gap: map-get($map: variables.$spacing, $key: "spacing-32");
+
+  @include mixins.sm-media-query {
+    gap: map-get($map: variables.$spacing, $key: "spacing-25");
+  }
 }
 
 .promo__description {

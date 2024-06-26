@@ -50,7 +50,10 @@
 }
 
 %orange-circle-36 {
-  $size: map-get($map: variables.$circle-sizes, $key: "circle-36");
+  $size: map-get(
+    $map: variables.$circle-sizes,
+    $key: "circle-36",
+  );
   $color: variables.$orange;
 
   @include mixins.filled-circle($size, $color);
@@ -66,6 +69,7 @@
 %filled-button {
   @extend %poppins-bold;
 
+  max-width: fit-content;
   padding: map-get($map: variables.$spacing, $key: "spacing-12")
     map-get($map: variables.$spacing, $key: "spacing-25");
   font-size: map-get($map: variables.$font-sizes, $key: "text-base");
@@ -75,6 +79,10 @@
 
 %section {
   margin-top: map-get($map: variables.$spacing, $key: "spacing-120");
+
+  @include mixins.sm-media-query {
+    margin-top: map-get($map: variables.$spacing, $key: "spacing-40");
+  }
 }
 
 %orange-circle-36-before {
@@ -86,5 +94,14 @@
     content: "";
     position: absolute;
     z-index: -1;
+  }
+}
+
+%section-heading {
+  font-size: map-get($map: variables.$font-sizes, $key: "text-4xl");
+  line-height: map-get($map: variables.$leading, $key: "relaxed");
+
+  @include mixins.sm-media-query {
+    font-size: map-get($map: variables.$font-sizes, $key: "text-2xl");
   }
 }
