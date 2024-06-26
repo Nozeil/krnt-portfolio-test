@@ -1,0 +1,72 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.promo {
+  height: map-get($map: variables.$promo-height, $key: "xl");
+  background: center/cover no-repeat url("/jpg/background.jpg");
+
+  @include mixins.xs-media-query {
+    height: map-get($map: variables.$promo-height, $key: "sm");
+    background-image: url("/jpg/background-sm.jpg");
+  }
+}
+
+.promo__socials {
+  @extend %row-items-center-gap-15;
+
+  width: map-get($map: variables.$promo-height, $key: "xl");
+  rotate: -90deg;
+  transform: translate(-100%, 50px);
+  transform-origin: top left;
+
+  @include mixins.xl-media-query {
+    visibility: hidden;
+  }
+}
+
+.promo__dash {
+  $width: 70px;
+  $height: 4px;
+
+  @include mixins.dash($width, $height, variables.$black);
+}
+
+.promo__content {
+  @include mixins.column;
+
+  gap: map-get($map: variables.$spacing, $key: "spacing-32");
+
+  @include mixins.sm-media-query {
+    gap: map-get($map: variables.$spacing, $key: "spacing-25");
+  }
+}
+
+.promo__description {
+  @include mixins.column;
+
+  gap: map-get($map: variables.$spacing, $key: "spacing-10");
+  margin-top: map-get($map: variables.$spacing, $key: "spacing-178");
+}
+
+.promo__subtitle {
+  max-width: map-get($map: variables.$promo-profession-max-width, $key: "xl");
+  font-size: map-get($map: variables.$font-sizes, $key: "text-5xl");
+  line-height: map-get($map: variables.$leading, $key: "tight");
+
+  @include mixins.sm-media-query {
+    max-width: map-get($map: variables.$promo-profession-max-width, $key: "sm");
+    font-size: map-get($map: variables.$font-sizes, $key: "text-3xl");
+    line-height: normal;
+  }
+}
+
+.promo__buttons {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-44",
+  );
+
+  display: flex;
+  gap: $gap;
+}

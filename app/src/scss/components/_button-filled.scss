@@ -1,0 +1,5 @@
+@use "../abstracts/placeholders";
+
+.button_filled {
+  @extend %filled-button;
+}

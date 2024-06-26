@@ -1,0 +1,11 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.button_link {
+  @extend %poppins-bold;
+
+  @include mixins.column-center;
+
+  font-size: map-get($map: variables.$font-sizes, $key: "text-base");
+}

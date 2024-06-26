@@ -1,13 +1,327 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/svg/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/scss/main.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="app">App</div>
+    <div class="app">
+      <div class="overlay"></div>
+      <nav class="nav">
+        <button class="burger-close-button">
+          <img src="/svg/close.svg" alt="burger-close-button" />
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#">ПРО МЕНЯ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#benefits">МОЙ ОПЫТ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">МОИ НАВЫКИ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">МОИ РАБОТЫ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">ПРАЙС-ЛИСТ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts">КОНТАКТЫ</a>
+          </li>
+        </ul>
+        <div class="social">
+          <a class="social__link" href="#">
+            <img src="/svg/github.svg" width="20" alt="github" />
+          </a>
+          <a class="social__link" href="#">
+            <img src="/svg/instagram.svg" width="20" alt="instagram" />
+          </a>
+          <a class="social__link" href="#">
+            <img src="/svg/facebook.svg" width="20" alt="facebook" />
+          </a>
+        </div>
+      </nav>
+      <main class="main">
+        <section class="promo">
+          <div class="promo__socials">
+            <h4>Социальные сети</h4>
+            <span class="promo__dash"></span>
+            <div class="social">
+              <a class="social__link" href="#">
+                <img src="/svg/github.svg" width="20" alt="github" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="/svg/instagram.svg" width="20" alt="instagram" />
+              </a>
+              <a class="social__link" href="#">
+                <img src="/svg/facebook.svg" width="20" alt="facebook" />
+              </a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="promo__content">
+              <div class="promo__description">
+                <h4 class="heading-circle-start">Меня зовут Александра Смит</h4>
+                <h1 class="promo__subtitle">
+                  Я web-разработчик из города Москва
+                </h1>
+              </div>
+              <div class="promo__buttons">
+                <a class="button_filled button_link" href="#">Портфолио</a>
+                <a class="button_link" href="#">Про меня</a>
+              </div>
+            </div>
+          </div>
+          <button class="burger">
+            <img src="/svg/burger.svg" alt="burger-icon" />
+          </button>
+        </section>
+        <section id="benefits" class="benefits-section">
+          <div class="container">
+            <div class="benefits">
+              <div class="section-heading">
+                <h4 class="heading-circle-center">Опыт</h4>
+                <h5 class="section-heading__subtitle">Чем я буду полезна</h5>
+                <span class="section-heading__dash"></span>
+              </div>
+              <div class="benefits__content">
+                <div class="time-line">
+                  <h3 class="time-line__title">Образование</h3>
+                  <div class="experience-cards">
+                    <div class="experience-card">
+                      <div class="experience-card__heading">
+                        <div class="experience-card__img-wrapper">
+                          <img
+                            class="experience-card__img"
+                            src="/svg/university.svg"
+                            alt="university"
+                          />
+                        </div>
+
+                        <div>
+                          <h5 class="experience-card__title">
+                            МГТУ им. Н. Э. Баумана
+                          </h5>
+                          <h6 class="experience-card__subtitle">
+                            Диплом магистра | Москва (2014-2020)
+                          </h6>
+                        </div>
+                      </div>
+                      <p class="experience-card__content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                    <div class="experience-card">
+                      <div class="experience-card__heading">
+                        <div class="experience-card__img-wrapper">
+                          <img
+                            class="experience-card__img"
+                            src="/svg/courses.svg"
+                            alt="courses"
+                          />
+                        </div>
+
+                        <div>
+                          <h5 class="experience-card__title">Udemy</h5>
+                          <h6 class="experience-card__subtitle">
+                            Курсы по Web-разработке
+                          </h6>
+                        </div>
+                      </div>
+                      <p class="experience-card__content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="time-line">
+                  <h3 class="time-line__title">Опыт работы</h3>
+                  <div class="experience-cards">
+                    <div class="experience-card">
+                      <div class="experience-card__heading">
+                        <div class="experience-card__img-wrapper">
+                          <img
+                            class="experience-card__img"
+                            src="/svg/developer.svg"
+                            alt="developer"
+                          />
+                        </div>
+
+                        <div>
+                          <h5 class="experience-card__title">
+                            Front-End Developer
+                          </h5>
+                          <h6 class="experience-card__subtitle">
+                            EPAM | Москва (2018-2019)
+                          </h6>
+                        </div>
+                      </div>
+                      <p class="experience-card__content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                    <div class="experience-card">
+                      <div class="experience-card__heading">
+                        <div class="experience-card__img-wrapper">
+                          <img
+                            class="experience-card__img"
+                            src="/svg/designer.svg"
+                            alt="designer"
+                          />
+                        </div>
+
+                        <div>
+                          <h5 class="experience-card__title">UI/UX Designer</h5>
+                          <h6 class="experience-card__subtitle">
+                            Squad Team | Москва (2018)
+                          </h6>
+                        </div>
+                      </div>
+                      <p class="experience-card__content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contacts" class="contacts-section">
+          <div class="container">
+            <div class="contacts">
+              <img class="contacts__img" src="/jpg/photo.jpg" alt="photo" />
+
+              <div class="contacts__content">
+                <div class="contacts__socials-wrapper">
+                  <div class="contacts__heading">
+                    <h4 class="contacts__title heading-circle-start">
+                      Контакты
+                    </h4>
+                    <h5 class="contacts__subtitle">Свяжитесь со мной</h5>
+                    <span class="section-heading__dash"></span>
+                  </div>
+
+                  <div class="contacts__socials">
+                    <p class="contacts__socials-text">
+                      Любым удобным для вас способом:
+                    </p>
+
+                    <div class="contacts__social-links">
+                      <a class="social__link" href="#">
+                        <img
+                          src="/svg/facebook.svg"
+                          width="30"
+                          alt="facebook"
+                        />
+                      </a>
+                      <a class="social__link" href="#">
+                        <img
+                          src="/svg/telegram.svg"
+                          width="30"
+                          alt="telegram"
+                        />
+                      </a>
+                      <a class="social__link" href="#">
+                        <img
+                          src="/svg/instagram.svg"
+                          width="30"
+                          alt="instagram"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <h5 class="contacts__form-heading">
+                  Или оставьте ваши данные и я сама вам напишу:
+                </h5>
+
+                <form class="contacts__form">
+                  <div class="contacts__input-group">
+                    <div class="contacts__input-field">
+                      <label
+                        class="contacts__label name-label"
+                        for="contact-name"
+                        >Ваше имя</label
+                      >
+                      <input
+                        id="contact-name"
+                        class="text-input contact-name-input"
+                        name="contact-name"
+                        type="text"
+                        autocomplete="off"
+                      />
+                      <span class="contacts__input-error name-error"
+                        >Пожалуйста, введите корректное имя.</span
+                      >
+                    </div>
+                    <div class="contacts__input-field">
+                      <label class="contacts__label email-label" for="email"
+                        >Ваша почта</label
+                      >
+                      <input
+                        id="email"
+                        class="text-input email-input"
+                        type="email"
+                        name="email"
+                        autocomplete="off"
+                      />
+                      <span class="contacts__input-error email-error"
+                        >Пожалуйста, введите корректный email.</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="contacts__input-field">
+                    <label class="contacts__label message-label" for="message"
+                      >Ваше сообщение</label
+                    >
+                    <textarea
+                      id="message"
+                      class="textarea"
+                      name="message"
+                    ></textarea>
+                    <span class="contacts__input-error message-error"
+                      >Пожалуйста, введите ваше сообщение.</span
+                    >
+                  </div>
+                  <button
+                    class="contacts__submit-button button_filled"
+                    type="submit"
+                  >
+                    Отправить сообщение
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -1,0 +1,75 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+$card-img-wrapper-size: 40px;
+
+.experience-card {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-12",
+  );
+
+  @include mixins.column-with-gap($gap);
+
+  max-width: map-get($map: variables.$experiance-card-max-width, $key: "xl");
+
+  @include mixins.xl-media-query {
+    max-width: map-get($map: variables.$experiance-card-max-width, $key: "sm");
+  }
+}
+
+.experience-card__heading {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-20",
+  );
+
+  @include mixins.row-with-gap(start, start, $gap);
+
+  position: relative;
+
+  &::before {
+    $color: variables.$black;
+    @include mixins.dash(variables.$time-line-spacing, 1px, variables.$black);
+
+    content: "";
+    position: absolute;
+    top: calc($card-img-wrapper-size / 2);
+    left: 0 - variables.$time-line-spacing;
+  }
+}
+
+.experience-card__img-wrapper {
+  $circle-size: map-get(
+    $map: variables.$circle-sizes,
+    $key: "circle-36",
+  );
+
+  @include mixins.size($card-img-wrapper-size, $card-img-wrapper-size);
+  @extend %orange-circle-36-before;
+
+  left: -($card-img-wrapper-size - $circle-size);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+  &::before {
+    top: 0;
+  }
+}
+
+.experience-card__title {
+  font-size: map-get($map: variables.$font-sizes, $key: "text-sm");
+}
+
+.experience-card__subtitle,
+.experience-card__content {
+  @extend %poppins-medium;
+
+  font-size: map-get($map: variables.$font-sizes, $key: "text-xs");
+}
+
+.experience-card__content {
+  margin: 0;
+}

@@ -1,0 +1,22 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.section-heading {
+  @include mixins.column-center;
+}
+
+.section-heading__subtitle {
+  @extend %section-heading;
+
+  margin-bottom: map-get($map: variables.$spacing, $key: "spacing-25");
+
+  @include mixins.sm-media-query {
+    margin-top: map-get($map: variables.$spacing, $key: "spacing-20");
+    margin-bottom: map-get($map: variables.$spacing, $key: "spacing-15");
+  }
+}
+
+.section-heading__dash {
+  @extend %orange-dash;
+}

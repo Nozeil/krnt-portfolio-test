@@ -1,0 +1,6 @@
+@use "../abstracts/variables";
+
+.main {
+  margin-bottom: map-get($map: variables.$spacing, $key: "spacing-90");
+  background-color: variables.$white;
+}

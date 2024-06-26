@@ -1,0 +1,9 @@
+@use "../abstracts/placeholders";
+
+.social {
+  @extend %row-items-center-gap-15;
+}
+
+.social__link {
+  @extend %row-item-center;
+}

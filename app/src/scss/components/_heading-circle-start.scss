@@ -1,0 +1,15 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.heading-circle-start {
+  @extend %orange-circle-36-before;
+
+  padding-left: map-get($map: variables.$spacing, $key: "spacing-10");
+
+  &::before {
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+  }
+}

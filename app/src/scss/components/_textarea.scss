@@ -1,0 +1,21 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.textarea {
+  $padding-y: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-15",
+  );
+
+  @include mixins.input;
+
+  height: map-get($map: variables.$textarea-height, $key: "xl");
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+  resize: none;
+
+  @include mixins.sm-media-query {
+    height: map-get($map: variables.$textarea-height, $key: "sm");
+  }
+}

@@ -1,0 +1,19 @@
+@use "../abstracts/mixins";
+
+.burger {
+  $top: 20px;
+  $right: 30px;
+
+  position: fixed;
+  top: $top;
+  right: $right;
+  line-height: 0;
+
+  @include mixins.sm-media-query {
+    $top: 20px;
+    $right: 20px;
+
+    top: $top;
+    right: $right;
+  }
+}

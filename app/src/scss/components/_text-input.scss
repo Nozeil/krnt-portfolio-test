@@ -1,0 +1,9 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+.text-input {
+  @include mixins.input;
+
+  height: 45px;
+}

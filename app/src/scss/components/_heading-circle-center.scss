@@ -1,0 +1,13 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.heading-circle-center {
+  @extend %orange-circle-36-before;
+
+  &::before {
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}

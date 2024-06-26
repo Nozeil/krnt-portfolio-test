@@ -1,0 +1,107 @@
+@use "./variables";
+@use "./mixins";
+
+%poppins-medium {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+%poppins-bold {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+%row-item-center {
+  @include mixins.row(center, center);
+}
+
+%row-items-center-gap-15 {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-15",
+  );
+
+  @include mixins.row-with-gap(center, center, $gap);
+}
+
+%column-gap-15 {
+  $gap: map-get(
+    $map: variables.$spacing,
+    $key: "spacing-15",
+  );
+
+  @include mixins.column-with-gap($gap);
+}
+
+%transition-300 {
+  $duration: 300ms;
+
+  transition: ease-in-out $duration;
+}
+
+%orange-circle-15 {
+  $size: map-get(
+    $map: variables.$circle-sizes,
+    $key: "circle-15",
+  );
+  $color: variables.$orange;
+
+  @include mixins.filled-circle($size, $color);
+}
+
+%orange-circle-36 {
+  $size: map-get(
+    $map: variables.$circle-sizes,
+    $key: "circle-36",
+  );
+  $color: variables.$orange;
+
+  @include mixins.filled-circle($size, $color);
+}
+
+%orange-dash {
+  $width: 60px;
+  $height: 3px;
+
+  @include mixins.dash($width, $height, variables.$orange);
+}
+
+%filled-button {
+  @extend %poppins-bold;
+
+  max-width: fit-content;
+  padding: map-get($map: variables.$spacing, $key: "spacing-12")
+    map-get($map: variables.$spacing, $key: "spacing-25");
+  font-size: map-get($map: variables.$font-sizes, $key: "text-base");
+  background-color: variables.$orange;
+  box-shadow: variables.$shadow-base;
+}
+
+%section {
+  margin-top: map-get($map: variables.$spacing, $key: "spacing-120");
+
+  @include mixins.sm-media-query {
+    margin-top: map-get($map: variables.$spacing, $key: "spacing-40");
+  }
+}
+
+%orange-circle-36-before {
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    @extend %orange-circle-36;
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+%section-heading {
+  font-size: map-get($map: variables.$font-sizes, $key: "text-4xl");
+  line-height: map-get($map: variables.$leading, $key: "relaxed");
+
+  @include mixins.sm-media-query {
+    font-size: map-get($map: variables.$font-sizes, $key: "text-2xl");
+  }
+}
