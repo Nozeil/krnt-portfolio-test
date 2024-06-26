@@ -6,7 +6,7 @@
   "packageManager": "yarn@1.22.21",
   "scripts": {
     "dev": "vite",
-    "build --base=/krnt-portfolio-test/": "tsc && vite build",
+    "build": "tsc && vite build --base=/krnt-portfolio-test/",
     "preview": "vite preview"
   },
   "devDependencies": {
